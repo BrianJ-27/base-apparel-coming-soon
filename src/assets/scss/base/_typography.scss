@@ -8,32 +8,43 @@
   font-family: var(--fp-font-main);
 }
 
-// h1 styles
-.title__primary {
-  @extend %text-modules;
-  @include text-prop(
-    $size: clamp(1rem, 6vw, 1.5rem),
-    $f-weight: 400,
-    $color: var(--clr-text-color)
-  );
+.title__primary,
+.content {
+  color: var(--clr-primary-color);
+  text-align: center;
 }
 
-// h2 styles
-.title__secondary {
-  @include text-prop(
-    $size: clamp(0.9rem, 8vw, 1.2rem),
-    $f-weight: 500,
-    $color: var(--clr-text-color)
-  );
+.title__primary,
+.title__primary--dark {
+  letter-spacing: px-to-rems(10px);
+}
+
+// h1 styles
+.title__primary {
+  --fp-weight-main: 300;
   @extend %text-modules;
+  @include text-prop(
+    $size: clamp(3rem, 6vw, 3.5rem),
+    $f-weight: var(--fp-weight-main),
+    $l-height: 1
+  );
+  padding: 5rem 0.5rem 0rem;
+  text-transform: uppercase;
+  &--dark {
+    --fp-weight-main: 600;
+    color: var(--clr-heading-color);
+    font-weight: var(--fp-weight-main);
+  }
 }
 
 /*----CONTENT STYLES----*/
 // p styles
 .content {
+  --fp-weight-main: 600;
   @include text-prop(
-    $size: clamp(0.78rem, 6vw, 1rem),
-    $f-weight: 800,
-    $color: var(--clr-text-color)
+    $size: clamp(0.75rem, 3.5vw, 1rem),
+    $f-weight: var(--fp-weight-main),
+    $l-height: 1.7
   );
+  padding: 1.5rem 0.5rem 1.8rem;
 }

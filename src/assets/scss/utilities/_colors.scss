@@ -11,18 +11,20 @@ Color Wheel:
 $colors: (
   // Primary Project Color
   primary: (
-    color: hsl(238, 29%, 16%)
+    color: hsl(0, 36%, 70%)
   ),
-  // Accent Project Color
-  accent: (
-    color: hsl(147, 88%, 65%)
+  // Error Project Color
+  error: (
+    color: hsl(0, 93%, 68%)
   ),
-  // Background Project Color
+  // Span Heading Color
+  heading: (
+    color: hsl(0, 6%, 24%)
+  ),
   bg: (
-    color: hsl(240, 73%, 65%)
-  ),
-  // Text Project Color
-  text: (
-    color: hsl(255, 0%, 0%)
+    gradient_white: hsl(0, 0%, 100%),
+    gradient_light: hsl(0, 100%, 98%),
+    gradient_soft-gum:  hsl(0, 80%, 86%),
+    gradient_bubble-gum: hsl(0, 74%, 74%)
   )
 );

@@ -3,31 +3,30 @@
 // **************************************
 @use "../utilities" as *;
 
+#root {
+  min-height: 100vh;
+}
+
 /*------FLEXBOX LAYOUT STYLES-----------*/
 
 .flex__container {
-  @include flex_me($dir: column);
+  @include flex_me();
+  position: relative;
 }
 
 /*------GRID LAYOUT STYLES-----------*/
 
-.grid__container {
-  @extend %ctr-grid-content;
-  min-height: 100vh;
-}
-
 .main__grid--container {
   display: grid;
-  grid-template-columns: minmax(300px, 350px);
   grid-template-areas:
-    "card_image"
-    "card_content";
+    "image__container"
+    "intro__container";
 }
 
-.card_image {
-  grid-area: card_image;
+.image__container {
+  grid-area: image__container;
 }
 
-.card_content {
-  grid-area: card_content;
+.intro__container {
+  grid-area: intro__container;
 }

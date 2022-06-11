@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const Footer = styled.footer``;
+const Footer = styled.footer`
+  text-align: center;
+  a {
+    color: var(--clr-primary-color);
+  }
+`;
 
 const CustomFooter = () => {
   return (

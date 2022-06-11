@@ -1,16 +1,23 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+const FormGroup = styled.div`
+  width: 100%;
+`;
+
 const StyledInput = styled.input`
-  margin-bottom: 1.3rem;
-  border: 1px solid var(--clr-text-normal);
-  border-radius: var(--soft-curve);
+  --curved-radius: 25px;
+  --fp-weight-main: 600;
+  background-color: inherit;
+  border-radius: var(--curved-radius);
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 100%;
-  padding-left: 30px;
+  width: inherit;
+  padding-left: 20px;
+  border: 1px solid var(--clr-primary-color);
   &::placeholder {
-    font-weight: var(--fp-f-weight-very-bold);
+    font-weight: var(--fp-weight-main);
+    color: var(--clr-primary-color);
   }
   &:focus-visible {
     outline: 1px solid var(--clr-accent-text);
@@ -40,10 +47,15 @@ const StyledLabel = styled.label`
 
 const FormField = ({ label, id, ...otherProps }) => {
   return (
-    <div className="group">
-      {label ? <StyledLabel htmlFor={id}> {label} </StyledLabel> : null}
+    <FormGroup>
+      {label ? (
+        <StyledLabel sr_only htmlFor={id}>
+          {" "}
+          {label}{" "}
+        </StyledLabel>
+      ) : null}
       <StyledInput required {...otherProps} />
-    </div>
+    </FormGroup>
   );
 };
 

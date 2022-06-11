@@ -1,11 +1,10 @@
 // **************************************
 // FONT MAPS
 // **************************************
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
 /*
 Font properties
-
+  font-weights 300, 400, 600
 */
 
 $font-love: (
@@ -16,7 +15,7 @@ $font-love: (
     main: 400,
   ),
   font: (
-    main: "Arial" sans-serif,
+    main: "Josefin Sans",
   ),
   l-height: (
     main: 1.5,
