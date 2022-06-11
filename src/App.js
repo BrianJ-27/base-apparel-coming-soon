@@ -1,12 +1,12 @@
 import Footer from "./components/layout/footer/footer";
-import Form from "./components/layout/form/form";
 
 const App = () => {
   return (
     <div className="grid__container">
       <main className="main__grid--container">
-        These are my React FEM Starter Files
-        <Form />
+        We're coming soon Hello fellow shoppers! We're currently building our
+        new fashion store. Add your email below to stay up-to-date with
+        announcements and our launch deals. Email Address
         <Footer />
       </main>
     </div>
